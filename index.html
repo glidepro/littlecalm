@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title></title>
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<style>
+		body {padding-top:60px;}
+		h1{
+			font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+		}
+		</style>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$('.keep-calm').on('click', function(e){
+				$.get('_generate.php', {say: $('.say').val()}, function(data){
+					console.log(data);
+					/*$.post('_send.php', {html:data}, function(data){
+						console.log(data);
+					});*/
+				});
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1>LITTLE CALM</h1>
+					<p>Keep calm and...
+						<input class="say"/>
+						<a href="#" class="keep-calm btn">Carry on!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
